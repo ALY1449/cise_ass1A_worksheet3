@@ -1,4 +1,22 @@
-// default.json
-{
-    "mongoURI"="mongodb+srv://mhx7115:<Ivandinglasan123>@mernatoz.6u7dtoh.mongodb.net/?retryWrites=true&w=majority"
+// db.js
+const mongoose = require('mongoose'); // -> communicate with MongoDB
+const config = require('config'); // -> folder name
+const db = config.get('mongoURI'); // ->link
+
+const connectDB = async () => {
+  try {
+    await mongoose.connect(
+      db,
+      {
+        useNewUrlParser: true
+      }
+    );
+
+    console.log('MongoDB is Connected...');
+  } catch (err) {
+    console.error(err.message);
+    process.exit(1);
   }
+};
+
+module.exports = connectDB;
