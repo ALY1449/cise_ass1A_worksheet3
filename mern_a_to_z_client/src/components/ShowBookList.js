@@ -1,42 +1,39 @@
-import React, { Component } from 'react';
-import '../App.css';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
-import BookCard from './BookCard';
+import React, { Component } from "react";
+import "../App.css";
+import axios from "axios";
+import { Link } from "react-router-dom";
+import BookCard from "./BookCard";
 
 class ShowBookList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      books: []
+      books: [],
     };
   }
 
   componentDidMount() {
     axios
-      .get('http://localhost:8082/api/books')
-      .then(res => {
+      .get("http://localhost:8082/api/books")
+      .then((res) => {
         this.setState({
-          books: res.data
-        })
+          books: res.data,
+        });
       })
-      .catch(err =>{
-        console.log('Error from ShowBookList');
-      })
-  };
-
+      .catch((err) => {
+        console.log("Error from ShowBookList");
+      });
+  }
 
   render() {
     const books = this.state.books;
     console.log("PrintBook: " + books);
     let bookList;
 
-    if(!books) {
+    if (!books) {
       bookList = "there is no book record!";
     } else {
-      bookList = books.map((book, k) =>
-        <BookCard book={book} key={k} />
-      );
+      bookList = books.map((book, k) => <BookCard book={book} key={k} />);
     }
 
     return (
@@ -49,19 +46,19 @@ class ShowBookList extends Component {
             </div>
 
             <div className="col-md-11">
-              <Link to="/create-book" className="btn btn-outline-warning float-right">
+              <Link
+                to="/create-book"
+                className="btn btn-outline-warning float-right"
+              >
                 + Add New Book
               </Link>
               <br />
               <br />
               <hr />
             </div>
-
           </div>
 
-          <div className="list">
-                {bookList}
-          </div>
+          <div className="list">{bookList}</div>
         </div>
       </div>
     );

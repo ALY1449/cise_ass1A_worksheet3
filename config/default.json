@@ -1,5 +1,5 @@
 {
-    "PORT": 5000,
-    "mongoURI": "mongodb+srv://mhx7115:Taeyeonunnie1449@mernatoz.6u7dtoh.mongodb.net/?retryWrites=true&w=majority",
-    "NODE_ENV": "production"
+  "PORT": 5000,
+  "mongoURI": "mongodb+srv://mhx7115:Taeyeonunnie1449@mernatoz.6u7dtoh.mongodb.net/?retryWrites=true&w=majority",
+  "NODE_ENV": "production"
 }

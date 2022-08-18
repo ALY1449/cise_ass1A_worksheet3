@@ -35,6 +35,8 @@
     "validation": "^0.0.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "eslint": "^8.22.0",
+    "nodemon": "^2.0.19",
+    "prettier": "2.7.1"
   }
 }
