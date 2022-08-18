@@ -30,4 +30,5 @@ const BookSchema = new mongoose.Schema({
   },
 });
 
+// eslint-disable-next-line no-undef
 module.exports = Book = mongoose.model('book', BookSchema);
