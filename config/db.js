@@ -2,6 +2,7 @@
 const mongoose = require('mongoose'); // -> communicate with MongoDB
 const config = require('config'); // -> global variable to run our project
 const db = config.get('mongoURI'); // ->link
+require("dotenv").config()
 
 const connectDB = async () => {
   try {
