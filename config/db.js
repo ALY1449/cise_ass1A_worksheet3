@@ -1,6 +1,6 @@
 // db.js
 const mongoose = require('mongoose'); // -> communicate with MongoDB
-const config = require('config'); // -> folder name
+const config = require('config'); // -> global variable to run our project
 const db = config.get('mongoURI'); // ->link
 
 const connectDB = async () => {
