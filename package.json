@@ -8,8 +8,8 @@
     "app": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cd mern_a_to_z_client && npm run build",
-    "install-client": "cd client && npm install",
     "client": "cd mern_a_to_z_client && npm start",
+    "install-client": "cd mern_a_to_z_client && npm install",
     "heroku-postbuild": "npm run install-client && npm run build"
   },
   "repository": {
